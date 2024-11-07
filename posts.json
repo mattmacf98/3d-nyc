@@ -1,0 +1,277 @@
+{
+  "posts":[
+     {
+        "lat":40.7831,
+        "lng":-73.9712,
+        "text":"Beautiful day at Central Park! Tons of people out for a picnic and enjoying the sunshine."
+     },
+     {
+        "lat":40.748817,
+        "lng":-73.985428,
+        "text":"Empire State Building looks amazing tonight! Theres a light show happening at 8 PM."
+     },
+     {
+        "lat":40.730610,
+        "lng":-73.935242,
+        "text":"Street fair going on in the East Village! Food trucks, live music, and great vibes."
+     },
+     {
+        "lat":40.7061,
+        "lng":-74.0087,
+        "altitude":0,
+        "text":"Wall Street buzzing with excitement for the annual financial district parade!"
+     },
+     {
+        "lat":40.7624,
+        "lng":-73.9738,
+        "text":"Broadway shows are sold out tonight, but Times Square is alive with energy!"
+     },
+     {
+        "lat":40.7156,
+        "lng":-73.9946,
+        "text":"Chinatown lantern festival is happening tonight! The streets are lit up and filled with festivities."
+     },
+     {
+        "lat":40.7216,
+        "lng":-74.0047,
+        "text":"Tribeca Film Festival starts today! Tons of indie films screening all week."
+     },
+     {
+        "lat":40.8075,
+        "lng":-73.9626,
+        "text":"Columbia University campus is buzzing with activity as students gear up for homecoming."
+     },
+     {
+        "lat":40.7590,
+        "lng":-73.9845,
+        "text":"The New York Public Library has a special book fair this weekend!"
+     },
+     {
+        "lat":40.8021,
+        "lng":-73.9442,
+        "text":"Harlem hosting an open-air jazz concert in Marcus Garvey Park today!"
+     },
+     {
+      "lat": 40.7711,
+      "lng": -73.9742,
+      "text": "Live band performance at the Great Lawn in Central Park today!"
+    },
+    {
+      "lat": 40.7308,
+      "lng": -73.9973,
+      "text": "Washington Square Park is buzzing with street performers and chess players today."
+    },
+    {
+      "lat": 40.7465,
+      "lng": -73.9931,
+      "text": "Check out the Chelsea Flea Market! Lots of vintage finds and unique art."
+    },
+    {
+      "lat": 40.7850,
+      "lng": -73.9683,
+      "text": "Central Park Zoo has a special penguin feeding show this afternoon!"
+    },
+    {
+      "lat": 40.7580,
+      "lng": -73.9855,
+      "text": "Times Square is packed with tourists watching the street performers. It's electric tonight!"
+    },
+    {
+      "lat": 40.7527,
+      "lng": -73.9772,
+      "text": "Bryant Park has its winter ice skating rink open today—bring your skates!"
+    },
+    {
+      "lat": 40.7420,
+      "lng": -74.0002,
+      "text": "High Line Park is perfect for a sunset stroll today, with artists displaying their work along the way."
+    },
+    {
+      "lat": 40.7099,
+      "lng": -74.0139,
+      "text": "Battery Park has some incredible street food vendors today. Grab a bite while enjoying the view!"
+    },
+    {
+      "lat": 40.7233,
+      "lng": -73.9894,
+      "text": "Live jazz happening at Tompkins Square Park this afternoon!"
+    },
+    {
+      "lat": 40.7653,
+      "lng": -73.9762,
+      "text": "Rockefeller Center is hosting a holiday light show tonight at 7 PM."
+    },
+    {
+      "lat": 40.7064,
+      "lng": -74.0094,
+      "text": "Battery Park City is having a sunset yoga session along the waterfront today."
+    },
+    {
+      "lat": 40.7302,
+      "lng": -73.9932,
+      "text": "West Village food festival happening now with gourmet street vendors and artisanal treats."
+    },
+    {
+      "lat": 40.7485,
+      "lng": -73.9857,
+      "text": "Take a tour of the Empire State Building's observation deck—best view in the city!"
+    },
+    {
+      "lat": 40.7587,
+      "lng": -73.9787,
+      "text": "St. Patrick's Cathedral is open for tours today. Don't miss this historical gem!"
+    },
+    {
+      "lat": 40.7177,
+      "lng": -74.0125,
+      "text": "Tribeca neighborhood is alive with food trucks and weekend brunch spots. Try something new!"
+    },
+    {
+      "lat": 40.7306,
+      "lng": -73.9935,
+      "text": "Greenwich Village has an outdoor art exhibit today featuring local painters and sculptors."
+    },
+    {
+      "lat": 40.8078,
+      "lng": -73.9641,
+      "text": "Columbia University is holding an outdoor movie night on the lawn. Don't forget your blanket!"
+    },
+    {
+      "lat": 40.7505,
+      "lng": -73.9934,
+      "text": "Madison Square Garden is hosting a Knicks game tonight! The excitement is palpable."
+    },
+    {
+      "lat": 40.7315,
+      "lng": -73.9835,
+      "text": "Union Square Greenmarket is open with fresh produce and baked goods—perfect for a weekend stroll."
+    },
+    {
+      "lat": 40.7984,
+      "lng": -73.9516,
+      "text": "Harlem's Morningside Park has a community cookout happening right now. Delicious food and great company!"
+    },
+    {
+      "lat": 40.7071,
+      "lng": -74.0162,
+      "text": "Pier 15 has free kayaking today! Enjoy some time on the water with views of the Brooklyn Bridge."
+    },
+    {
+      "lat": 40.7596,
+      "lng": -73.9840,
+      "text": "Times Square is hosting a pop-up art installation—check out the amazing digital displays!"
+    },
+    {
+      "lat": 40.7521,
+      "lng": -73.9770,
+      "text": "Grab some lunch and relax in Bryant Park—great weather today and plenty of seating."
+    },
+    {
+      "lat": 40.7433,
+      "lng": -74.0060,
+      "text": "Chelsea Market has a food festival today with some of the best local vendors in the city."
+    },
+    {
+      "lat": 40.7492,
+      "lng": -73.9774,
+      "text": "Murray Hill is hosting a block party today with live music and tons of family-friendly activities."
+    },
+    {
+      "lat": 40.7570,
+      "lng": -73.9855,
+      "text": "Broadway theaters are bustling with visitors! Can't wait to see a show tonight."
+    },
+    {
+      "lat": 40.7045,
+      "lng": -74.0133,
+      "text": "Financial District has a food truck rally today with incredible international flavors."
+    },
+    {
+      "lat": 40.7641,
+      "lng": -73.9738,
+      "text": "MoMA has a new exhibit opening today—check out the modern art and interactive displays."
+    },
+    {
+      "lat": 40.7590,
+      "lng": -73.9845,
+      "text": "The lights of Times Square are even more dazzling tonight. Perfect time for a photo op!"
+    },
+    {
+      "lat": 40.7858,
+      "lng": -73.9566,
+      "text": "Explore the Metropolitan Museum of Art today! Free entry for New York residents."
+    },
+    {
+      "lat": 40.7505,
+      "lng": -73.9934,
+      "text": "Madison Square Garden is packed tonight for a concert—can't wait to see my favorite band!"
+    },
+    {
+      "lat": 40.8075,
+      "lng": -73.9452,
+      "text": "Harlem's Marcus Garvey Park is hosting a cultural street fair with food and performances."
+    },
+    {
+      "lat": 40.7532,
+      "lng": -73.9822,
+      "text": "Fifth Avenue is lined with shoppers today, exploring all the luxury boutiques!"
+    },
+    {
+      "lat": 40.7794,
+      "lng": -73.9632,
+      "text": "The American Museum of Natural History has free admission today! Fun for the whole family."
+    },
+    {
+      "lat": 40.7150,
+      "lng": -73.9948,
+      "text": "Chinatown's streets are decorated for the Mid-Autumn Festival—tons of food stands and celebrations."
+    },
+    {
+      "lat": 40.7429,
+      "lng": -73.9934,
+      "text": "Flatiron District food festival is happening now! Try all the best bites from local chefs."
+    },
+    {
+      "lat": 40.7336,
+      "lng": -74.0027,
+      "text": "West Village is celebrating Pride Month with a huge parade—come join the fun!"
+    },
+    {
+      "lat": 40.7591,
+      "lng": -73.9842,
+      "text": "Times Square has a special art event happening tonight. Lots of street artists showing their work."
+    },
+    {
+      "lat": 40.8079,
+      "lng": -73.9475,
+      "text": "The Apollo Theater in Harlem has an open mic night! Come and show off your talents."
+    },
+    {
+      "lat": 40.7340,
+      "lng": -74.0078,
+      "text": "Meatpacking District rooftop bars are buzzing tonight—great spot to enjoy the city skyline."
+    },
+    {
+      "lat": 40.7540,
+      "lng": -73.9845,
+      "text": "Grand Central Terminal is hosting a photography exhibition today—some incredible shots of NYC!"
+    },
+    {
+      "lat": 40.7645,
+      "lng": -73.9780,
+      "text": "Rockefeller Plaza ice skating rink is officially open—perfect day to take a spin on the ice!"
+    },
+    {
+      "lat": 40.7233,
+      "lng": -73.9940,
+      "text": "The Lower East Side is full of live music tonight. Great night for bar hopping and dancing!"
+    },
+    {
+      "lat": 40.7626,
+      "lng": -73.9738,
+      "text": "Radio City Music Hall has a special showing of the Rockettes tonight. The holiday season is here!"
+    }  
+  ]
+}
+
+  
