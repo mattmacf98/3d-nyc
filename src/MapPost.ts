@@ -37,7 +37,6 @@ export class MapPost {
         });
         
         this._marker.addEventListener('gmp-click', () => {
-            console.log(this._postDoc);
             this._onClickCallback(this._postDoc.text, this._postDoc.photoId, this._postDoc.relatedUrl, this._postDoc.tag);
         });
 

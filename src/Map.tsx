@@ -34,14 +34,21 @@ export const MapComponent = () => {
   const [AIResponse, setAIResponse] = useState<string | null>(null);
   const [flying, setFlying] = useState(false);
   const [flyThroughPosts, setFlyThroughPosts] = useState<MapPost[]>([]);
+  const [windowAIEnabled, setWindowAIEnabled] = useState(false);
 
   useEffect(() => {
     initMap();
-    setupAI();
+    setupAI()
+    
   }, []);
 
   const setupAI = async () => {
-    AIRef.current = await getWindowAI();
+    try {
+      AIRef.current = await getWindowAI();
+      setWindowAIEnabled(true);
+    } catch(e) {
+      console.warn("Window.ai is not enabled, AI agent will not run")
+    }
   }
 
 
@@ -104,7 +111,9 @@ export const MapComponent = () => {
 
     setFlyThroughPosts(allPosts);
 
-    await promptAI(searchText, allPosts.map(p => p.postDoc.text));
+    if (windowAIEnabled) {
+      await promptAI(searchText, allPosts.map(p => p.postDoc.text));
+    }
     setLoadingSearch(false);
   }
 
