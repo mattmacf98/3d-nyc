@@ -1,6 +1,6 @@
 # Try it out
 
-The Best way to try it out is to go to the live app at  [nyc3d-front-end-acdc497c2b32.herokuapp.com](https://nyc3d-front-end-acdc497c2b32.herokuapp.com/). To enable the AI Summarization feature, you will need to add the window.ai plugin to your chrome browser: https://windowai.io/
+The Best way to try it out is to go to the live app at  [nyc3d-front-end-acdc497c2b32.herokuapp.com](https://nyc3d-front-end-acdc497c2b32.herokuapp.com/). To enable the AI Summarization feature, you will need to add use Chrome built in AI https://developer.chrome.com/docs/ai/built-in
 
 # Running locally
 
