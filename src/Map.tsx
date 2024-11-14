@@ -47,6 +47,7 @@ export const MapComponent = () => {
       AIRef.current = await getWindowAI();
       setWindowAIEnabled(true);
     } catch(e) {
+      console.error(e);
       console.warn("Window.ai is not enabled, AI agent will not run")
     }
   }
@@ -61,6 +62,7 @@ export const MapComponent = () => {
 
 
     const ai = await getWindowAI();
+    console.log(template);
     const [res] = await ai.generateText({ messages: [{role: "user", content: template}] });
 
     setAIResponse(res.message.content)
@@ -112,7 +114,12 @@ export const MapComponent = () => {
     setFlyThroughPosts(allPosts);
 
     if (windowAIEnabled) {
-      await promptAI(searchText, allPosts.map(p => p.postDoc.text));
+      try {
+        await promptAI(searchText, allPosts.map(p => p.postDoc.text));
+      } catch (e) {
+        console.error(e);
+        console.warn("Failed to prompt AI, window.ai may be disabled");
+      }
     }
     setLoadingSearch(false);
   }
