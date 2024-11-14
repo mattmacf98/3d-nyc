@@ -8,7 +8,7 @@ import { PostModal } from "./PostModal";
 import { Button, Form, FormControl, InputGroup, Modal, Image, Badge, Spinner } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { getWindowAI } from "window.ai";
+import { AISession } from "./window";
 
 const TAG_TO_COLOR: Map<string, string> = new Map<string, string>([
   ["Food", "red"],
@@ -26,7 +26,7 @@ export const MapComponent = () => {
   const [searchText, setSearchText] = useState<string>("");
   const [loadingSearch, setLoadingSearch] = useState(false);
   const threeDMapRef = useRef<any>();
-  const AIRef = useRef<any>();
+  const aiSessionRef = useRef<AISession>();
   const postClusterGroupRef = useRef<MapPostClusterGroup| null>(null);
   const searchPosts = useAction(api.posts.searchPosts);
   const [showPostModal, setShowPostModal] = useState(false);
@@ -34,7 +34,7 @@ export const MapComponent = () => {
   const [AIResponse, setAIResponse] = useState<string | null>(null);
   const [flying, setFlying] = useState(false);
   const [flyThroughPosts, setFlyThroughPosts] = useState<MapPost[]>([]);
-  const [windowAIEnabled, setWindowAIEnabled] = useState(false);
+  const [aiEnabled, setAiEnabled] = useState(false);
 
   useEffect(() => {
     initMap();
@@ -43,13 +43,13 @@ export const MapComponent = () => {
   }, []);
 
   const setupAI = async () => {
-    try {
-      AIRef.current = await getWindowAI();
-      setWindowAIEnabled(true);
-    } catch(e) {
-      console.error(e);
-      console.warn("Window.ai is not enabled, AI agent will not run")
+    if (!window.ai || !window.ai.languageModel) { 
+      console.log("AI not supported");
+      return;
     }
+    const session = await window.ai.languageModel.create();
+    aiSessionRef.current = session;
+    setAiEnabled(true);
   }
 
 
@@ -61,11 +61,10 @@ export const MapComponent = () => {
     template += `\n\nusing this context, respond to the following prompt while keeping your answer under 2 sentences: ${prompt}`;
 
 
-    const ai = await getWindowAI();
-    console.log(template);
-    const [res] = await ai.generateText({ messages: [{role: "user", content: template}] });
-
-    setAIResponse(res.message.content)
+    const result = await aiSessionRef.current?.prompt(template);
+    if (result) {
+      setAIResponse(result);
+    }
   }
 
   const handleSubmit = async () => {
@@ -113,7 +112,7 @@ export const MapComponent = () => {
 
     setFlyThroughPosts(allPosts);
 
-    if (windowAIEnabled) {
+    if (aiEnabled) {
       try {
         await promptAI(searchText, allPosts.map(p => p.postDoc.text));
       } catch (e) {
