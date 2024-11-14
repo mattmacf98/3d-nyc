@@ -200,42 +200,58 @@ export const MapComponent = () => {
   return (
     <div>
         <div style={{position: "absolute", top: "1vh", width: "100vw", zIndex: 1, display: "flex", justifyContent: "center"}}>
-          <div style={{display: "flex", background: "white", padding: 16, width: "50vw", borderRadius: 10}}>
-            <Form className="d-flex me-auto" style={{width: "70%"}}onSubmit={(e) => {
-                  e.preventDefault();
-                  handleSubmit();
-                }}>
-                <InputGroup>
-                  <InputGroup.Text>
-                    <FontAwesomeIcon icon={faSearch} onClick={handleSubmit}/>
-                  </InputGroup.Text>
-                  <FormControl
-                    style={{background: "#F2F4F8"}}
-                    type="search"
-                    value={searchText}
-                    onChange={(e: any) => setSearchText(e.target.value)}
-                    placeholder="Search Posts..."
-                    className="me-2"
-                    aria-label="Search"
-                    disabled={loadingSearch}
-                  />
-                </InputGroup>
-              </Form>
-              {loadingSearch &&
-                <Spinner animation="border"/>
-              }
-              <Button variant="primary" className="ms-auto" disabled={loadingSearch} onClick={() => setShowPostModal(true)}>Add Post</Button>
-              
-              <Button variant="primary" className="ms-auto" disabled={flying || flyThroughPosts.length === 0} onClick={() => {
+          <div style={{
+            display: "flex", 
+            flexDirection: "row", 
+            flexWrap: "wrap", 
+            background: "white", 
+            padding: "12px", 
+            width: "90vw", 
+            maxWidth: "800px", 
+            borderRadius: 10,
+            gap: "8px", 
+          }}>
+            <Form className="d-flex" style={{
+              flex: "1 1 250px", 
+              minWidth: "250px",
+            }} onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit();
+            }}>
+              <InputGroup>
+                <InputGroup.Text>
+                  <FontAwesomeIcon icon={faSearch} onClick={handleSubmit}/>
+                </InputGroup.Text>
+                <FormControl
+                  style={{background: "#F2F4F8"}}
+                  type="search"
+                  value={searchText}
+                  onChange={(e: any) => setSearchText(e.target.value)}
+                  placeholder="Search Posts..."
+                  className="me-2"
+                  aria-label="Search"
+                  disabled={loadingSearch}
+                />
+              </InputGroup>
+            </Form>
+            
+            <div style={{
+              display: "flex",
+              gap: "8px", 
+              flex: "0 0 auto", 
+            }}>
+              {loadingSearch && <Spinner animation="border"/>}
+              <Button variant="primary" disabled={loadingSearch} onClick={() => setShowPostModal(true)}>
+                Add Post
+              </Button>
+              <Button variant="primary" disabled={flying || flyThroughPosts.length === 0} onClick={() => {
                 setFlying(true);
                 createFlyThroughWaypoint(flyThroughPosts.slice(0, Math.min(5, flyThroughPosts.length)))();
               }}>
                 Fly Through
-                {
-                  flying &&
-                  <Spinner animation="border"/>
-                }
+                {flying && <Spinner animation="border"/>}
               </Button>
+            </div>
           </div>
         </div>
           
